@@ -1,0 +1,9 @@
+{
+  "id": "pocket-art-studio",
+  "name": "Pocket Art Studio",
+  "version": "0.1.0",
+  "minAppVersion": "1.5.0",
+  "description": "Capture everyday fragments as Markdown and prepare selected passages for artistic collaboration.",
+  "author": "Pocket Art Studio Contributors",
+  "isDesktopOnly": true
+}

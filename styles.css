@@ -1,0 +1,148 @@
+.pas-library,
+.pas-modal {
+  --pas-ink: var(--text-normal);
+  --pas-secondary: var(--text-muted);
+  --pas-paper: color-mix(in srgb, var(--background-primary) 92%, #bb8649);
+  --pas-line: var(--background-modifier-border);
+  --pas-accent: var(--text-accent);
+}
+
+.pas-library {
+  padding: clamp(0.75rem, 4%, 1.25rem);
+  color: var(--pas-ink);
+}
+
+.pas-mast {
+  position: relative;
+  padding: 1.1rem 1rem 1.2rem;
+  border: 1px solid var(--pas-line);
+  border-top: 3px solid var(--interactive-accent);
+  border-radius: 0 0 0.35rem 0.35rem;
+  background: var(--pas-paper);
+}
+
+.pas-mast h1 {
+  margin: 0.25rem 0 0.45rem;
+  font-family: "Noto Serif SC", "Songti SC", SimSun, serif;
+  font-size: 1.55rem;
+  line-height: 1.2;
+}
+
+.pas-mast p {
+  margin: 0 0 0.8rem;
+  color: var(--pas-secondary);
+  line-height: 1.55;
+}
+
+.pas-mast .pas-kicker {
+  margin: 0;
+  color: var(--pas-accent);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.pas-filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 7rem), 1fr));
+  gap: 0.55rem;
+  margin: 1rem 0 0.65rem;
+}
+
+.pas-field {
+  display: grid;
+  gap: 0.3rem;
+  min-width: 0;
+  color: var(--pas-secondary);
+  font-size: var(--font-ui-small);
+}
+
+.pas-field :is(input, select, textarea) {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  color: var(--pas-ink);
+}
+
+.pas-field textarea {
+  min-height: 6rem;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.pas-entry {
+  padding: 0.9rem 0.2rem;
+  border-bottom: 1px solid var(--pas-line);
+  overflow-wrap: anywhere;
+}
+
+.pas-entry h2 {
+  margin: 0.25rem 0;
+  font-family: "Noto Serif SC", "Songti SC", SimSun, serif;
+  font-size: 1.06rem;
+  line-height: 1.5;
+}
+
+.pas-entry-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  color: var(--pas-accent);
+  font-size: 0.75rem;
+}
+
+.pas-entry time,
+.pas-muted,
+.pas-empty {
+  color: var(--pas-secondary, var(--text-muted));
+  font-size: var(--font-ui-small);
+}
+
+.pas-entry .pas-actions { margin-top: 0.55rem; }
+
+.pas-empty {
+  border: 1px dashed var(--pas-line);
+  border-radius: 0.3rem;
+  padding: 0.9rem;
+  line-height: 1.6;
+}
+
+.pas-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.pas-actions button { min-height: 1.9rem; }
+.pas-quiet { padding-inline: 0.4rem; color: var(--pas-accent); }
+
+.pas-form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.pas-form p { margin: 0; }
+
+.pas-question {
+  padding: 0.7rem 0.8rem;
+  border-inline-start: 2px solid var(--interactive-accent);
+  border-radius: 0.2rem;
+  background: var(--pas-paper);
+}
+
+.pas-check {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  color: var(--pas-secondary);
+  font-size: var(--font-ui-small);
+  overflow-wrap: anywhere;
+}
+
+.pas-check input { flex: none; }
+.pas-ai { border-top: 1px solid var(--pas-line); padding-top: 0.55rem; }
+.pas-ai summary { cursor: pointer; }
+.pas-ai :is(p, label, button) { margin-top: 0.45rem; }
+.pas-link { width: fit-content; }
+.pas-status:empty { display: none; }
+.pas-status { color: var(--pas-secondary, var(--text-muted)); font-size: var(--font-ui-small); }
